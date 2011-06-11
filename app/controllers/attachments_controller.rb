@@ -2,7 +2,10 @@ class AttachmentsController < ApplicationController
 def new
  @attachment=Attachment.new
 end    
-
+def me 
+a = Attachment.find(params[:id])
+send_data   a.data, :filename => a.filename, :type => a.content_type
+    end
 
 def show
         #@attachment = Attachment.find(params[:id])

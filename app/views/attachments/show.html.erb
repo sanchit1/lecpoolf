@@ -1,2 +1,6 @@
-<h1>Attachments#show</h1>
-<p>Find me in app/views/attachments/show.html.erb</p>
+<h3>Files:</h3>
+<%Attachment.all.each do |t|%>
+<a href ="/attachments/<%=t.id%>/file"><%=t.filename%></a><br />
+<%end%>
+
+
