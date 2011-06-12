@@ -10,12 +10,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110608004552) do
+ActiveRecord::Schema.define(:version => 20110611111111) do
 
   create_table "attachments", :force => true do |t|
-    t.string "filename"
-    t.string "content_type"
-    t.binary "data"
+    t.string  "filename"
+    t.string  "content_type"
+    t.binary  "data"
+    t.integer "user_id"
+    t.string  "course"
+    t.string  "course1"
   end
 
   create_table "users", :force => true do |t|

@@ -1,7 +1,7 @@
 
 require 'digest'
 class User < ActiveRecord::Base
-
+has_many :attachments
    attr_accessor :password
 attr_accessible :name, :email, :password, :password_confirmation,:rollno,:department,:cn1,
 :cn2,:cn3,:cn4,:cn5,:cn6,:cn7, :image, :remote_image_url
